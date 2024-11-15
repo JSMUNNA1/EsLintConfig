@@ -68,3 +68,33 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+### Step of config the EsLint
+1.Create a New CRA Project (if not already done):
+2.Install ESLint (if needed) and ESLint plugins: CRA comes with ESLint, but you may want to install specific ESLint plugins for custom rules:
+npm install eslint --save-dev
+3.Extend the ESLint Configuration:
+Create a .eslintrc.json file in the root of your project if it doesn't already exist.
+Add your custom configuration in .eslintrc.json
+{
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "eqeqeq": "error",
+    "react/prop-types": "off"
+  }
+}
+
+4.Update ESLint Settings in VSCode:
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": true
+}
+5.Running ESLint Manually:
+npx eslint src/
+Automatic Fixes:
+npx eslint src/ --fix
+
