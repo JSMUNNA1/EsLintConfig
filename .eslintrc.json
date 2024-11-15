@@ -1,0 +1,13 @@
+{
+  "env": {
+      "browser": true,
+      "es2021": true
+    },
+  "extends": ["react-app", "react-app/jest"],
+  "rules": {
+    "no-unused-vars": "error",
+    "eqeqeq": "error",
+    "react/prop-types": "off",
+    "no-console":"error"
+  }
+}
